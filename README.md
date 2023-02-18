@@ -6,19 +6,19 @@ Données
 
 Les données sont disponibles sous la forme de trois fichiers:
 
-    xTrain.csv: caractéristiques nécessaires à la prédiction des comportements anormaux ou non des vaches.
-    yTrain.csv: état de la vache après 24 heures.
-    xEval.csv: caractéristiques nécessaires à la prédiction des comportements anormaux ou non des vaches pour le jeu de test.
+    `xTrain.csv`: caractéristiques nécessaires à la prédiction des comportements anormaux ou non des vaches.
+    `yTrain.csv`: état de la vache après 24 heures.
+    `xEval.csv`: caractéristiques nécessaires à la prédiction des comportements anormaux ou non des vaches pour le jeu de test.
 
-Les attributs dans les fichiers xTrain.csv et xEval.csv sont:
+Les attributs dans les fichiers `xTrain.csv` et `xEval.csv` sont:
 
-    date hour: date et heure du premier enregistrement.
-    idCow: identifiant de la vache.
-    all+i: nombre de secondes passées dans les allées pour l'heure date hour + i (i compris entre 0 et 23).
-    rest+i: nombre de secondes passées dans les logettes pour l'heure date hour + i (i compris entre 0 et 23).
-    eat+i: nombre de secondes passées dans la salle des auges pour l'heure date hour + i (i compris entre 0 et 23).
+    `date hour`: date et heure du premier enregistrement.
+    `idCow`: identifiant de la vache.
+    `all+i`: nombre de secondes passées dans les allées pour l'heure date hour + i (i compris entre 0 et 23).
+    `rest+i`: nombre de secondes passées dans les logettes pour l'heure date hour + i (i compris entre 0 et 23).
+    `eat+i`: nombre de secondes passées dans la salle des auges pour l'heure date hour + i (i compris entre 0 et 23).
 
-Le fichier yTrain.csv contient une seule colonne indiquant l'état de la vache après 24 heures. Les valeurs sont 0 si l'état est considéré comme normal et 1 sinon. Il y a des valeurs manquantes sous la forme de NaN dans le fichier xTrain.csv, tandis que le fichier xEval.csv a déjà été nettoyé.
+Le fichier `yTrain.csv` contient une seule colonne indiquant l'état de la vache après 24 heures. Les valeurs sont 0 si l'état est considéré comme normal et 1 sinon. Il y a des valeurs manquantes sous la forme de NaN dans le fichier xTrain.csv, tandis que le fichier `xEval.csv` a déjà été nettoyé.
 ## Objectif
 
 L'objectif est de trouver le meilleur modèle de classification pour prédire les comportements anormaux des vaches. Il est possible d'utiliser différents algorithmes d'apprentissage supervisé vus en cours et/ou de modifier ces algorithmes. Les réseaux de neurones ne sont pas autorisés. Les résultats seront évalués en utilisant la fonction sklearn.metrics.f1_score et la matrice de confusion. Les prédictions devront être envoyées au format CSV, au plus tard 5 jours avant la date de rendu.
